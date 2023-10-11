@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Germania+One&family=Roboto+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>My Portfolio</title>
+
+    <!-- About -->
+    <!-- Project -->
+    <!-- Skill -->
+    <!-- Kontak -->
+    <!-- bisa memanfaatkan hero, navbar -->
+    <style>
+      * {
+        font-family: "Abril Fatface", cursive;
+        font-family: "Germania One", cursive;
+        font-family: "Roboto Condensed", sans-serif;
+      }
+
+      .navbar {
+        background-color: #4a6163;
+        color: #eeeeed;
+        font-size: 20px;
+        box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+      }
+
+      .navbar-title {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      .navbar-brand {
+        color: white;
+      }
+
+      .nav-link {
+        color: #eeeeed;
+      }
+
+      .nav-link:hover {
+        font-weight: 10px;
+        color: white;
+      }
+
+      .lead {
+        font-family: "Abril Fatface";
+        font-size: 50px;
+        color: black;
+        font-weight: bold;
+      }
+
+      .myname {
+        font-size: 30px;
+        color: black;
+        font-weight: bold;
+      }
+
+      .underLead {
+        font-size: 20px;
+        color: black;
+      }
+
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 0px;
+        position: relative;
+        box-sizing: border-box;
+        padding: 0 5px;
+      }
+
+      .column .overlay {
+        position: absolute;
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px black;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        font-family: "Roboto Condensed";
+        font-size: 20px;
+        padding: 10px;
+        font-weight: bold;
+      }
+
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .btn {
+        margin: 10px auto 10px auto;
+      }
+
+      .containerProject {
+        background-color: #f9faf4;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .underLead-projects {
+        font-size: 20px;
+        color: black;
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: auto;
+        white-space: normal;
+        margin-top: 10px; /* Add some top margin to separate it from the image */
+        margin-right: 30%;
+      }
+
+      .col-lg-6 {
+        text-align: left;
+      }
+
+      .containerSkill {
+        margin-top: 10%;
+        padding: 10% 5% 10% 5%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .containerContact {
+        margin-top: 10%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+      }
+
+      .project-image {
+        max-width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        float: right;
+        margin-top: 10px;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="/static/style.css" /> -->
+    <!-- Khusus melakukan link css external -->
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar-example2" class="navbar px-3 mb-3">
+      <div class="navbar-title" style="font-family: 'Germania One'">
+        MyPortfolio
+      </div>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyAbout">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyProjects">Project</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspySkill">Skill</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyContact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- SpyScroll -->
+    <div
+      data-bs-spy="scroll"
+      data-bs-target="#navbar-example2"
+      data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true"
+      class="scrollspy-example p-3 rounded-2"
+      tabindex="0"
+    ></div>
+    <!-- About Me -->
+
+    <div class="container col-xxl-8 px-4 py-0">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <h4 id="scrollspyAbout"></h4>
+          <img src="/static/herald.png" d-block mx-lg-auto img-fluid"
+          alt="Bootstrap Themes" width="500" height="auto" loading="lazy"
+          style="margin-right: 10%">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="lead">About Me</h1>
+          <h2 class="myname">Herald Faisal Satriantoro</h2>
+          <p class="underLead">
+            I am a final year student majoring in Social Anthropology at
+            University of Tanjungpura Pontianak, with various skills related to
+            the creative and technology field and with over one year of
+            experience working in a team and three months as a freelance worker,
+            I am capable of working under pressure and quickly learning new
+            things, as well as efficiently completing tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+
+    <div class="containerProject col-xxl-8 px-4">
+      <div class="row flex-lg-row align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <h4 id="scrollspyProjects"></h4>
+          <img class="project-image" src="/static/image4191.png" d-block
+          mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="auto"
+          loading="lazy" style="margin-left: 10%">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="lead">Projects</h1>
+          <p class="underLead-projects">
+            My previous works encompass graphic design, ranging from magazine
+            layout and logo design to 3D modeling by utilizing tools, both
+            industry standard like Adobe PhotoShop, Adobe Illustrator, to its
+            open source counter part programs such as Inkscape, Scribus, and
+            Blender3D.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skill -->
+
+    <div class="containerSkill text-center col-xxl-8 py-0">
+      <div class="row">
+        <div class="container text-center">
+          <div class="row">
+            <div class="lead col">
+              <h4 id="scrollspySkill"></h4>
+              Skill
+              <div class="row">
+                <div class="column">
+                  <div class="overlay" style="font-size: 30px">
+                    3D MODELLING
+                  </div>
+                  <img
+                    src="https://miro.medium.com/v2/resize:fit:800/1*7zKy7ApAilsVT0Mzeiasyw.jpeg"
+                    style="width: 100%"
+                  />
+                </div>
+                <div class="column">
+                  <div class="overlay" style="font-size: 30px">
+                    GRAPHIC DESIGN
+                  </div>
+                  <img
+                    src="https://cdn.under30ceo.com/wp-content/uploads/2021/05/featured-image.jpg.webp"
+                    alt="sampletext"
+                    style="width: 100%"
+                  />
+                </div>
+                <div class="column">
+                  <div class="overlay" style="font-size: 30px">
+                    MAGAZINE LAYOUTING
+                  </div>
+                  <img
+                    src="https://shop.parkrun.com/cdn/shop/products/parkrun-magazine-issue-3-mockup-18_800x.png?v=1687949179"
+                    style="width: 100%"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact -->
+    <section class="bg-light containerContact">
+      <h4 id="scrollspyContact"></h4>
+      <h2 class="text-center mb-5 lead">Contact Me</h2>
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center text-white" style="background-color: #ffc94b">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <img
+            class="btn btn-floating m-1"
+            src="https://cdn-icons-png.flaticon.com/128/6422/6422200.png"
+            role="button"
+            style="height: 48px"
+          />
+
+          <img
+            class="btn btn-floating m-1"
+            src="https://cdn-icons-png.flaticon.com/128/6422/6422199.png"
+            role="button"
+            style="height: 48px"
+          />
+
+          <img
+            class="btn btn-floating m-1"
+            src="https://cdn-icons-png.flaticon.com/128/6424/6424084.png"
+            role="button"
+            style="height: 48px"
+          />
+
+          <img
+            class="btn btn-floating m-1"
+            src="https://cdn-icons-png.flaticon.com/128/6422/6422202.png"
+            role="button"
+            style="height: 48px"
+          />
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: #f9a66c">
+        © 2023
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </body>
+</html>
